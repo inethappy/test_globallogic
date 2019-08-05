@@ -58,7 +58,7 @@ void find_pennies(t_base *input, char c)
 	{
 		input->centesimal = strchr(input->number, c) + 1;
 		if (strlen(input->centesimal) != 2)
-			p_error("\e[31mError! Divisional part from 00 to 99, please.", input);
+			p_error("\033[32mError! Divisional part from 00 to 99, please.\033[0m", input);
 		input->number[strlen(input->number) - 3] = '\0';
 	}
 }

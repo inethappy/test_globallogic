@@ -13,7 +13,7 @@ int	set_language(t_base *input)
 		printf("Thanks! Your currency is %s.\n", input->currency);
 	else
 	{
-		printf("\e[31mWrong currency. If You want to select another country - You need to add this feature manually.\e[0m");
+		printf("\e[31mWrong currency. If You want to select another country - You need to add this feature manually.\e[0m\n");
 		set_language(input);
 	}
 	return (1);

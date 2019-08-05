@@ -66,6 +66,8 @@ void	put_ukr_hundreds(char *number, t_base *input, int length)
 			else
 				put_ukr_singles(input, unit, length);
 			input->last_word = (number[count + 1]) ? unit + (number[count + 1] - '0') : unit;
+			if (number[count - 1] && len_nb == 2 && number[count] == '0')
+				input->last_word = 10;
 		}
 		strcat(input->out, " ");
 		len_nb--;

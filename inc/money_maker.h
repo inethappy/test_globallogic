@@ -33,16 +33,13 @@ void	set_names(t_base *input);
 void	set_eng_names(t_base *input);
 void	set_ukr_names(t_base *input);
 void	find_pennies(t_base *input, char c);
-
 void	put_words(t_base *input, char *number);
-void put_eng_words(t_base *input, char *number);
+void	put_eng_words(t_base *input, char *number);
 void	put_eng_hundreds(char *number, t_base *input, int length);
-void put_eng_powers(t_base *input, int rank);
-void put_ukr_words(t_base *input, char *number);
+void	put_eng_powers(t_base *input, int rank);
+void	put_ukr_words(t_base *input, char *number);
 void	put_ukr_singles(t_base *input, int number, int len);
 void	put_ukr_hundreds(char *number, t_base *input, int length);
-
-
 void	put_powers(t_base *input, int rank);
 void	put_eng_powers(t_base *input, int rank);
 void	put_ukr_powers(t_base *input, int rank);

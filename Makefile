@@ -36,6 +36,7 @@ fclean: clean
 	@rm -rf $(OBJECTS_DIR)
 	@rm -rf $(NAME)
 	@rm -rf leaks.txt
+	@rm -rf test.txt
 re: fclean all
 vpath %.c $(SOURCES_DIR)
 
