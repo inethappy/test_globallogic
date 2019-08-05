@@ -4,12 +4,14 @@ void	p_error(char *string, t_base *input)
 {
 	printf("%s\n", string);
 	free(input->number);
+	input->number = NULL;
 	get_input(input);
 }
 
 void del_input(t_base *input)
 {
 	free(input->number);
+	input->number = NULL;
 	memset(input->out, 0, 500);
 	input->centesimal = NULL;
 	free(input->singles);

@@ -13,4 +13,5 @@ $make fclean
 
 WINDOWS
 
-For the correct display of the program on Windows, it is necessary that the compiler and the GNUmake tool are installed, which may not be very pleasant to install. So just in case, I put here a compiled executable called money_maker.exe. Then in the console to display the Ukrainian language you need to enter the command: $chcp 65001.
+For the correct display of the program on Windows, it is necessary that the compiler and the GNUmake tool are installed (http://www.gnu.org/software/make/).
+Just in case, I put here a compiled executable called money_maker.exe. Then in the console to display the Ukrainian language you need to enter the command: $chcp 65001.
