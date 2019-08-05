@@ -2,18 +2,25 @@
 
 void	get_input(t_base *input)
 {
-	char get_nb[15];
+	char get_nb[1024];
 
+	memset(get_nb, '\0', 150);
 	input->number = (char*)malloc(sizeof(char) * 15);
 	input->number[15] = '\0';
 	printf("Enter number: ");
-	strcpy(input->number, fgets(get_nb, 14, stdin));
-	number_validation(input);
+	fgets(get_nb, 1024, stdin);
+	if (strlen(get_nb) > 13)
+		p_error("\033[32mError! Value must be >= 0 and <= 2147483647.\033[0m", input);
+	else
+	{
+		strcpy(input->number, get_nb);
+		number_validation(input);
+	}
 }
 
 void	number_validation(t_base *input)
 {
-	if (input->number[14] || (atoi(input->number) > 2147483647 || atoi(input->number) < 0))
+	if (input->number[14] || (atol(input->number) > 2147483647 || atol(input->number) < 0))
 		p_error("\033[32mError! Value must be >= 0 and <= 2147483647.\033[0m", input);
 	trim(input->number);
 	for (int i = 0; i < strlen(input->number); i++)

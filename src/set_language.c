@@ -2,10 +2,10 @@
 
 int	set_language(t_base *input)
 {
-	char language_input[10];
+	char language_input[100];
 
 	printf("Enter your country please (USA/UKR): ");
-	fgets(language_input, 10, stdin);
+	fgets(language_input, 100, stdin);
 	if (language_input[0] == '\n')
 		return (0);
 	input->currency = get_currency(language_input, input);
